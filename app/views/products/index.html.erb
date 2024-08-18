@@ -1,0 +1,22 @@
+
+<div>
+  <div class="block">
+    <h1 class="text-4xl underline">Products#index</h1>
+    <p class="italic">Find me in app/views/products/index.html.erb</p>
+  </div>
+  <div class="block">
+    <%= render "upload" %>
+  </div>
+  <div id="products" class="block">
+  <div>
+    Products:
+    <%= @products.count %>
+    <% @products.each do |product| %>
+      <br>Name: <%= product.name%><br/>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,4 @@
+<%= form_tag upload_products_path, method: :post, multipart: true do %>
+    <%= file_field_tag :file, accept: ".csv" %>
+    <%= submit_tag '⚙️ Upload' %>
+  <% end %>
