@@ -1,19 +1,46 @@
 
 <div>
-  <div class="block">
-    <h1 class="text-4xl underline">Products#index</h1>
-    <p class="italic">Find me in app/views/products/index.html.erb</p>
-  </div>
+  <div class="text-4xl mb-4">Products</div>
   <div class="block">
     <%= render "upload" %>
+    <div class="mt-2">
+      <p style="color: red"><%= alert %></p>
+      <p style="color: green"><%= notice %></p>
+    </div>
   </div>
   <div id="products" class="block">
   <div>
-    Products:
-    <%= @products.count %>
+    <div class="text-2xl mt-8 mb-4">Products</div>
+  <table class='border-b '>
+    <tr>
+      <th class='text-left py-4'>Name</th>
+      <th class='text-left py-4'>Sales</th>
+      <th class='text-left py-4'>Revenue</th>
+      <th class='text-left py-4'>Price</th>
+      <th class='text-left py-4'>Status</th>
+    </tr>
     <% @products.each do |product| %>
-      <br>Name: <%= product.name%><br/>
-    <% end %>
+    <tr class="bg-white">
+      <td class='border-t border-l p-6 w-96'>
+        <div class="font-bold"><%= product.name%></div>
+        <div class="underline">sophia.06gumroad.com/l/<%= product.url_id%></div>
+      </td>
+      <td class='border-t w-24'>
+        0
+      </td>
+      <td class='border-t w-32'>
+        $0
+      </td>
+      <td class='border-t w-24'>
+        <div>$<%= product.price_cents%></div>
+      </td>
+      <td class='border-t border-r w-40'>
+        Unpublished
+      </td>
+      <% end %>
+      </td>
+    </tr>
+  </table>
   </div>
   </div>
 </div>

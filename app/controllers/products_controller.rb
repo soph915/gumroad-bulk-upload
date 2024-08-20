@@ -4,11 +4,11 @@ class ProductsController < ApplicationController
   end
 
   def upload
-    return redirect_to request.referer, notice: 'No file added' if params[:file].nil?
-    return redirect_to request.referer, notice: 'Only CSV files allowed' unless params[:file].content_type == 'text/csv'
+    return redirect_to products_path, alert: 'No file added' if params[:file].nil?
+    return redirect_to products_path, alert: 'Only CSV files allowed' unless params[:file].content_type == 'text/csv'
 
     CsvUploadService.new.call(params[:file])
 
-    redirect_to request.referer, notice: 'Import started...'
+    redirect_to products_path, notice: 'Upload started...'
   end
 end
