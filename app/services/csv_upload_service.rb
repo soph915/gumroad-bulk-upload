@@ -3,6 +3,8 @@ class CsvUploadService
   
     def call(file)
       errors = []
+      products_created = 0
+
       opened_file = File.open(file)
       options = { headers: true, col_sep: ',' }
       CSV.foreach(opened_file, **options).with_index(2) do |row, row_number|
@@ -18,8 +20,12 @@ class CsvUploadService
         product = Product.create(product_hash)
   
         if product.valid? == false
-          errors << {row_number => product.errors.objects.first.full_message}
+          errors << "Row #{row_number}: #{product.errors.objects.first.full_message}"
+        else 
+          products_created += 1
         end
       end
+
+      return errors, products_created
     end
   end

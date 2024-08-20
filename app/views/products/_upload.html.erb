@@ -1,4 +1,4 @@
 <%= form_tag upload_products_path, method: :post, multipart: true do %>
   <%= file_field_tag :file, accept: ".csv" %>
-  <button class='border bg-pink h-12 rounded-md p-2'><%= submit_tag 'Bulk Upload' %></button>
+  <button class='border bg-pink h-12 rounded-md p-2'><%= submit_tag 'Upload' %></button>
 <% end %>
