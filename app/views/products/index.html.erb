@@ -32,7 +32,7 @@
         $0
       </td>
       <td class='border-t w-24'>
-        <div>$<%= product.price_cents%></div>
+        <div><%= Money.from_cents(product.price_cents, product.currency).format%></div>
       </td>
       <td class='border-t border-r w-40'>
         Unpublished
