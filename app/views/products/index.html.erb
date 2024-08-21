@@ -1,12 +1,20 @@
 
 <div>
-  <div class="text-4xl mb-4">Bulk Upload</div>
-  <div class="text-xl mb-4">Select a csv to bulk create products.</div>
+  <div class="text-4xl mb-4">Bulk Create</div>
+  <div class="text-xl mb-4">Use a csv to bulk create products.</div>
   <div class="block mb-8">
     <%= render "upload" %>
     <div class="mt-2">
       <p style="color: green"><%= notice %></p>
       <p style="color: red"><%= alert %></p>
+    </div>
+  </div>
+  <div class="mb-4">
+    Sample CSVs:
+    <div class="pl-4">
+      <a href="sample1.csv" download>CSV1 &nbsp; &nbsp;</a>
+      <a href="sample2.csv" download>CSV2 &nbsp; &nbsp;</a>
+      <a href="sample3.csv" download>CSV3 &nbsp; &nbsp;</a>
     </div>
   </div>
   <hr>

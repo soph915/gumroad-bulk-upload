@@ -1,0 +1,6 @@
+Name,Category,Description,Price,Currency,Url Id
+Testing 1,Physical,here a test physical product,1999,USD,testing1
+Testing 2,Physical,here a test physical product,4000,USD,testing2
+Testing 3,Physical,here a test physical product,1234,USD,testing3
+Testing 4 GBP,Physical,here a test physical product,6000,GBP,testing4gbp
+Testing 5 EUR,Physical,here a test physical product,5090,EUR,testing5eur
