@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  require 'money'
+  require "money"
 
   def index
     @products = Product.all
@@ -7,8 +7,8 @@ class ProductsController < ApplicationController
 
   def upload
     @csv_errors = []
-    return redirect_to products_path, alert: 'No file added' if params[:file].nil?
-    return redirect_to products_path, alert: 'Only CSV files allowed' unless params[:file].content_type == 'text/csv'
+    return redirect_to products_path, alert: "No file added" if params[:file].nil?
+    return redirect_to products_path, alert: "Only CSV files allowed" unless params[:file].content_type == "text/csv"
 
     csv_service = CsvUploadService.new.call(params[:file])
 
